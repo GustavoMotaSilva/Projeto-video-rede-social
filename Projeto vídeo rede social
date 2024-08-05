@@ -1,0 +1,228 @@
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/WjKOQBkU1Mc
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import { Button } from "@/components/ui/button"
+import { Slider } from "@/components/ui/slider"
+import { Card, CardContent } from "@/components/ui/card"
+
+export default function Component() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-6">
+      <div className="rounded-lg overflow-hidden">
+        <div className="relative w-full aspect-video">
+          <video
+            className="w-full h-full object-cover"
+            controls
+            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent p-4 flex items-center justify-between">
+            <div className="flex items-center gap-2 text-white">
+              <Button variant="ghost" size="icon" className="hover:bg-white/20">
+                <PlayIcon className="w-6 h-6" />
+              </Button>
+              <Button variant="ghost" size="icon" className="hover:bg-white/20">
+                <PauseIcon className="w-6 h-6" />
+              </Button>
+              <Button variant="ghost" size="icon" className="hover:bg-white/20">
+                <Volume2Icon className="w-6 h-6" />
+              </Button>
+              <Slider
+                className="flex-1 [&>span:first-child]:h-1 [&>span:first-child]:bg-white/30 [&_[role=slider]]:bg-white [&_[role=slider]]:w-3 [&_[role=slider]]:h-3 [&_[role=slider]]:border-0 [&>span:first-child_span]:bg-white [&_[role=slider]:focus-visible]:ring-0 [&_[role=slider]:focus-visible]:ring-offset-0 [&_[role=slider]:focus-visible]:scale-105 [&_[role=slider]:focus-visible]:transition-transform"
+                defaultValue={[40]}
+              />
+              <div className="text-sm">1:20 / 3:45</div>
+            </div>
+            <Button variant="ghost" size="icon" className="hover:bg-white/20">
+              <MaximizeIcon className="w-6 h-6" />
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="space-y-4">
+        <Card>
+          <CardContent className="grid gap-4">
+            <div className="flex items-start gap-4">
+              <img
+                src="/placeholder.svg"
+                alt="Thumbnail"
+                width={120}
+                height={90}
+                className="rounded-md object-cover"
+                style={{ aspectRatio: "120/90", objectFit: "cover" }}
+              />
+              <div>
+                <h3 className="text-lg font-medium line-clamp-2">
+                  Vercel Ship Keynote: Introducing the frontend cloud
+                </h3>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div>Vercel</div>
+                  <div>•</div>
+                  <div>70K subscribers</div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="grid gap-4">
+            <div className="flex items-start gap-4">
+              <img
+                src="/placeholder.svg"
+                alt="Thumbnail"
+                width={120}
+                height={90}
+                className="rounded-md object-cover"
+                style={{ aspectRatio: "120/90", objectFit: "cover" }}
+              />
+              <div>
+                <h3 className="text-lg font-medium line-clamp-2">
+                  Vercel Ship Keynote: Introducing the frontend cloud
+                </h3>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div>Vercel</div>
+                  <div>•</div>
+                  <div>70K subscribers</div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="grid gap-4">
+            <div className="flex items-start gap-4">
+              <img
+                src="/placeholder.svg"
+                alt="Thumbnail"
+                width={120}
+                height={90}
+                className="rounded-md object-cover"
+                style={{ aspectRatio: "120/90", objectFit: "cover" }}
+              />
+              <div>
+                <h3 className="text-lg font-medium line-clamp-2">
+                  Vercel Ship Keynote: Introducing the frontend cloud
+                </h3>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div>Vercel</div>
+                  <div>•</div>
+                  <div>70K subscribers</div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="grid gap-4">
+            <div className="flex items-start gap-4">
+              <img
+                src="/placeholder.svg"
+                alt="Thumbnail"
+                width={120}
+                height={90}
+                className="rounded-md object-cover"
+                style={{ aspectRatio: "120/90", objectFit: "cover" }}
+              />
+              <div>
+                <h3 className="text-lg font-medium line-clamp-2">
+                  Vercel Ship Keynote: Introducing the frontend cloud
+                </h3>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div>Vercel</div>
+                  <div>•</div>
+                  <div>70K subscribers</div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  )
+}
+
+function MaximizeIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+      <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+      <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+      <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+    </svg>
+  )
+}
+
+
+function PauseIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="14" y="4" width="4" height="16" rx="1" />
+      <rect x="6" y="4" width="4" height="16" rx="1" />
+    </svg>
+  )
+}
+
+
+function PlayIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polygon points="6 3 20 12 6 21 6 3" />
+    </svg>
+  )
+}
+
+
+function Volume2Icon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+    </svg>
+  )
+}
